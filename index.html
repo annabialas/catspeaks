@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>HW 9/14/16 Anna Bialas</title>
+ 
+ <style>
+ 
+ 	#homework { 
+ 		margin: 80px auto 20px auto; 
+ 		width: 800px;
+ 		font-family: 'Helvetica', sans-serif;
+ 		font-weight: 200;
+ 		text-align: center;
+ 	}
+
+ 	 button { 
+ 	 	cursor: pointer; 
+ 	 	width: auto;
+ 	 	height: 52px;
+ 	 	line-height: 16px;
+ 	 	font-size: 16px;
+ 	 	padding: 10px 20px 10px 20px;
+ 	 	vertical-align: middle;
+ 	 	border: none;
+ 	 	color: #FFFFFF ;
+ 	 	background-color:rgba(255, 157, 110, .9);
+ 	 	transition: all .4s;
+ 	 }
+
+ 	 button:hover { outline: none; transition-property: background-color; background-color: rgba(255, 157, 110, 1)}
+
+ 	 button:active { outline: none; }
+
+ 	 button:focus { outline: none; } 
+
+ </style>
+ 
+ </head>
+ <body>
+ 
+ <div id="homework">
+ 	<h4><em>ORANGE CATS DOING THINGS</em></h4>
+ 	<button>Click to read what they're up to</button>
+ 	<p><em>(All captions anonymized to protect the felines' privacy!)</em></p>
+ 	<caption>by Anna Bialas</caption>
+ </div>
+ 
+ <script>
+
+ 	//DATA
+
+ 	var cats = [
+		{  
+		   "id":"487685059",
+		   "caption":"Ginger cat walking through house, backlit with bright sunlight."
+		},
+		{  
+		   "id":"568401921",
+		   "caption":"Ginger cat sitting on a hay bale with his eyes shut and head tilted to one side."
+		},
+		{  
+		   "id":"588494823",
+		   "caption":null
+		},
+		{  
+		   "id":"166273308",
+		   "caption":null
+		},
+		{  
+		   "id":"592357499",
+		   "caption":null
+		},
+		{  
+		   "id":"480994665",
+		   "caption":"Orange cat with green eyes like is relax"
+		},
+		{  
+		   "id":"477174619",
+		   "caption":"Orange cat face"
+		},
+		{  
+		   "id":"185211039",
+		   "caption":"Ginger cat posing on white background"
+		},
+		{  
+		   "id":"594898546",
+		   "caption":"Orange cat at restaurant."
+		},
+		{  
+		   "id":"591944974",
+		   "caption":null
+		},
+		{  
+		   "id":"96991937",
+		   "caption":"Ginger kitten on white background"
+		},
+		{  
+		   "id":"588626314",
+		   "caption":"Two ginger cats relaxing on a bed - one ginger cat is lying down and looking towards but not directly at the camera, and in the background another ginger cat is sitting and looking towards the camera."
+		},
+		{  
+		   "id":"588626250",
+		   "caption":"A ginger cat is lying on a bed with geometric bed sheets. He is looking playful and looking up at the camera."
+		},
+		{  
+		   "id":"588626266",
+		   "caption":"Ginger cat sitting on floor, he is looking up and away from the camera. Behind him is visible a television set."
+		},
+		{  
+		   "id":"588626292",
+		   "caption":"Ginger cat sitting on balustrade of roof terrace, in the background chimneys are visible"
+		},
+		{  
+		   "id":"588626312",
+		   "caption":"A ginger cat playing on the floor, showing his belly to the camera"
+		},
+		{  
+		   "id":"588626490",
+		   "caption":"A ginger cat sitting by a chimney, looking away from the camera"
+		},
+		{  
+		   "id":"588626310",
+		   "caption":"A ginger cat sitting behind a door, looking directly at the camera. In the background a coffee table and sofa are visible."
+		},
+		{  
+		   "id":"588626320",
+		   "caption":"Ginger cat relaxing by stretching out across a grey carpet"
+		},
+		{  
+		   "id":"535366352",
+		   "caption":"A ginger cat standing on roof terrace ledge, looking out across the garden. In the background is a sunny sky, trees and rooftops."
+		},
+		{  
+		   "id":"535366152",
+		   "caption":"Pink tulips in a glass tankard on a coffee table. Visible in the background are photo frames, a ginger cat and succulents."
+		},
+		{  
+		   "id":"656196197",
+		   "caption":null
+		},
+		{  
+		   "id":"656196209",
+		   "caption":null
+		},
+		{  
+		   "id":"656196205",
+		   "caption":null
+		},
+		{  
+		   "id":"490565289",
+		   "caption":"Studio shot of a Norwegian forest cat."
+		},
+		{  
+		   "id":"545664430",
+		   "caption":null
+		},
+		{  
+		   "id":"588574346",
+		   "caption":"A ginger cat relaxing on a patio. He is lying down and looking beyond the camera. In the background some plants are visible."
+		},
+		{  
+		   "id":"478823909",
+		   "caption":"Maine Coon kitten sitting, looking away, 4 months old, isolated on white"
+		},
+		{  
+		   "id":"106444720",
+		   "caption":"Smiling Ginger Mixed breed cat (6 months old) "
+		},
+		{  
+		   "id":"451957763",
+		   "caption":"female domestic ginger cat jumping like a dancer on white background."
+		}
+	];
+ 
+ 	document.querySelector("button").addEventListener("click", addCaption);
+
+	function addCaption(){
+ 		var caption = cats[Math.floor(Math.random() * cats.length)].caption;
+ 		if (caption == null) { caption = "Sorry, nothing here!" };
+ 		var para = document.createElement("p");           
+ 		para.innerHTML = para.innerHTML + caption;
+ 		document.getElementById("homework").appendChild(para);
+ 	};
+
+//works
+         
+ </script>
+ 
+ </body>
+ </html>
+ 
